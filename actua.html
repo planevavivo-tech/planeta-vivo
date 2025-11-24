@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro – Proyecto Reforesta 2025–2026</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --verde-principal: #3ca374;
+      --verde-oscuro: #2b7a58;
+      --fondo: #f5f9f6;
+      --texto: #333;
+      --blanco: #fff;
+      --gris: #666;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 { font-size: 1.6em; letter-spacing: 1px; }
+
+    nav ul { display: flex; list-style: none; gap: 20px; }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    .hero {
+      background: linear-gradient(rgba(60,163,116,0.6), rgba(60,163,116,0.6)),
+                  url('https://images.unsplash.com/photo-1523978591478-c753949ff840?auto=format&fit=crop&w=1200&q=60') center/cover;
+      color: var(--blanco);
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h2 { font-size: 2.4em; margin-bottom: 10px; }
+    .hero p { max-width: 700px; margin: 0 auto; font-size: 1.1em; }
+
+    .contenido {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h2.seccion {
+      text-align: center;
+      color: var(--verde-oscuro);
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .info {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+
+    .info p, .info ul {
+      color: var(--gris);
+      font-size: 1.05em;
+    }
+
+    .info ul li {
+      margin-bottom: 8px;
+    }
+
+    .lugares {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .card-lugar {
+      background-color: #e9f4ec;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .card-lugar h4 {
+      color: var(--verde-oscuro);
+      margin-bottom: 10px;
+    }
+
+    .formulario {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+    }
+
+    label {
+      font-weight: bold;
+      color: var(--verde-oscuro);
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-bottom: 15px;
+      font-size: 1em;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { background-color: var(--verde-oscuro); }
+
+    footer {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Planeta Vivo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">¿Quiénes somos?</a></li>
+        <li><a href="index2.html">Tienda</a></li>
+        <li><a href="index3.html">Campañas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Registro de Voluntariado</h2>
+    <p>Forma parte del cambio. Regístrate para participar en las jornadas del Proyecto Reforesta 2025–2026.</p>
+  </section>
+
+  <section class="contenido">
+    <div class="info">
+      <h2 class="seccion">Lugares de Reforestación</h2>
+      <p>Las primeras jornadas de reforestación se llevarán a cabo en las siguientes regiones, seleccionadas por su alto nivel de deforestación y necesidad ecológica:</p>
+
+      <div class="lugares">
+        <div class="card-lugar">
+          <h4>Chiapas – Selva Lacandona</h4>
+          <p>Zona tropical con pérdida significativa de biodiversidad. Se plantarán especies nativas como ceibas y caobas.</p>
+        </div>
+        <div class="card-lugar">
+          <h4>Michoacán – Sierra Purépecha</h4>
+          <p>Área afectada por tala irregular. Se busca restaurar la cubierta forestal con pinos y encinos.</p>
+        </div>
+        <div class="card-lugar">
+          <h4>Estado de México – Valle de Bravo</h4>
+          <p>Zona turística con erosión de suelos. Se plantarán oyameles y especies de sotobosque.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="info">
+      <h2 class="seccion">Requisitos y Materiales</h2>
+      <p>Para participar como voluntario es importante cumplir con los siguientes puntos:</p>
+      <ul>
+        <li>Tener 15 años o más (menores acompañados por un adulto).</li>
+        <li>Contar con buena condición física para caminatas cortas.</li>
+        <li>Llevar agua, bloqueador solar y gorra o sombrero.</li>
+        <li>Ropa cómoda y calzado resistente (de preferencia botas).</li>
+        <li>Se recomienda llevar guantes, pala pequeña o cubeta.</li>
+      </ul>
+      <p>El material de siembra (plantas, bolsas, fertilizantes) será proporcionado por la organización en cada jornada.</p>
+    </div>
+
+    <div class="formulario">
+      <h2 class="seccion">Formulario de Registro</h2>
+      <form>
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="region">Selecciona tu región de participación:</label>
+        <select id="region" name="region" required>
+          <option value="">-- Selecciona una opción --</option>
+          <option value="chiapas">Chiapas – Selva Lacandona</option>
+          <option value="michoacan">Michoacán – Sierra Purépecha</option>
+          <option value="edomex">Estado de México – Valle de Bravo</option>
+        </select>
+
+        <label for="mensaje">¿Por qué deseas participar?</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu motivación aquí..."></textarea>
+
+        <button type="submit" class="btn">Enviar registro</button>
+      </form>
+    </div>
+  </section>
+
+   <footer>
+    Equipo 6 | Planeta Vivo: ODS 13, Acción por el Clima | Hecho en HTML y CSS | <a href="contacto.html">Contacto</a>
+  </footer>
+</body>
+</html>

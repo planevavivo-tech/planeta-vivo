@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda Solidaria – Planeta Vivo</title>
+  <link rel="icon" href="logo 1.png" type="image/png">
+  <style>
+    :root {
+      --verde-principal: #3ca374;
+      --verde-oscuro: #2b7a58;
+      --fondo: #f5f9f6;
+      --texto: #333;
+      --blanco: #fff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--texto);
+    }
+
+    header {
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.6em;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(60,163,116,0.6), rgba(60,163,116,0.6)),
+                  url('https://static.vecteezy.com/system/resources/previews/006/159/188/non_2x/spring-summer-forest-trees-nature-green-wood-sunlight-backgrounds-idyllic-calm-natural-scenic-peaceful-walk-or-hike-forest-background-design-photo.jpg') center/cover;
+      color: var(--blanco);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    .productos {
+      padding: 50px 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .productos h2 {
+      text-align: center;
+      color: var(--verde-oscuro);
+      margin-bottom: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .producto {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .producto:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .producto img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 20px;
+    }
+
+    .info h3 {
+      color: var(--verde-oscuro);
+      margin-bottom: 10px;
+    }
+
+    .info p {
+      font-size: 0.95em;
+      margin-bottom: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background-color: var(--verde-oscuro);
+    }
+
+    footer {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Planeta Vivo</h1>
+    <nav>
+      <ul>
+          <li><a href="index.html" class="btn btn-primary active" aria-current="page">¿Quiénes somos?</a></li>
+        <li><a href="index2.html" class="btn btn-primary">Tienda</a></li>
+       <li><a href="index3.html" class="btn btn-primary">Campañas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Tienda Solidaria</h2>
+    <p>Con cada compra ayudas a financiar proyectos para reducir la huella de carbono, reforestar y proteger ecosistemas locales.</p>
+  </section>
+
+  <section class="productos">
+    <h2>Productos ecológicos</h2>
+    <div class="grid">
+      <div class="producto">
+        <img src="1.png" alt="Bolsa ecológica">
+        <div class="info">
+          <h3>Bolsa ecológica</h3>
+          <p>Hecha 100% de materiales reciclados. Ideal para compras diarias.</p>
+          <a href="4.png" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <div class="producto">
+        <img src="4.png" alt="Botella reutilizable">
+        <div class="info">
+          <h3>Botella reutilizable</h3>
+          <p>Evita el uso de plástico con nuestras botellas de acero inoxidable.</p>
+          <a href="4.png" class="btn">Comprar</a>
+        </div>
+      </div>
+
+      <div class="producto">
+        <img src="2.png" alt="Playera sostenible">
+        <div class="info">
+          <h3>Playera sostenible</h3>
+          <p>Algodón orgánico, diseño cómodo y respetuoso con el medio ambiente.</p>
+          <a href="2.png" class="btn">Comprar</a>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="3.png" alt="Playera sostenible">
+        <div class="info">
+          <h3>Libreta sostenible</h3>
+          <p>Libreta hecha de papel reciclado, perfecta para tus notas.</p>
+          <a href="1.png" class="btn">Comprar</a>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="we.gif" alt="Taza de cerámica">
+        <div class="info">
+          <h3>Taza de cerámica</h3>
+          <p>Taza de cerámica, perfecta para tus bebidas.</p>
+          <a href="we.gif" class="btn">Comprar</a>
+        </div>
+      </div>
+      <div class="producto">
+        <img src="6.png" alt="Almohada sostenible">
+        <div class="info">
+          <h3>Almohada sostenible</h3>
+          <p>Almohada hecha de materiales reciclados, ideal para un descanso eco-amigable.</p>
+          <a href="6.png" class="btn">Comprar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <footer>
+    Equipo 6 | Planeta Vivo: ODS 13, Acción por el Clima | Hecho en HTML y CSS | <a href="contacto.html">Contacto</a>
+  </footer>
+</body>
+</html>

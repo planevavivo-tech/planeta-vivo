@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campañas – Planeta Vivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --verde-principal: #3ca374;
+      --verde-oscuro: #2b7a58;
+      --fondo: #f5f9f6;
+      --texto: #333;
+      --blanco: #fff;
+      --gris: #666;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 1.6em;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 20px;
+    }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero {
+      background: linear-gradient(rgba(60,163,116,0.6), rgba(60,163,116,0.6)),
+                  url('https://wallpapers.com/images/featured/fondos-verde-bosque-g6m2rr1edx45d7kz.jpg') center/cover;
+      color: var(--blanco);
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h2 {
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1em;
+    }
+
+    .contenido {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h2.seccion {
+      text-align: center;
+      color: var(--verde-oscuro);
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .campana-destacada {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+    }
+
+    .campana-destacada img {
+      width: 100%;
+      max-width: 500px;
+      object-fit: cover;
+    }
+
+    .campana-info {
+      flex: 1;
+      padding: 30px;
+    }
+
+    .campana-info h3 {
+      color: var(--verde-oscuro);
+      font-size: 1.8em;
+      margin-bottom: 15px;
+    }
+
+    .campana-info p {
+      color: var(--gris);
+      margin-bottom: 20px;
+    }
+
+    .progreso {
+      background-color: #dfeee3;
+      border-radius: 20px;
+      height: 10px;
+      margin-bottom: 10px;
+      overflow: hidden;
+    }
+
+    .progreso span {
+      display: block;
+      height: 10px;
+      background-color: var(--verde-principal);
+      width: 70%;
+    }
+
+    .botones {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: var(--verde-oscuro);
+    }
+
+    .btn-blanco {
+      background-color: var(--blanco);
+      border: 2px solid var(--verde-principal);
+      color: var(--verde-principal);
+    }
+
+    .btn-blanco:hover {
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+    }
+
+    .grid-campanas {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-bottom: 60px;
+    }
+
+    .card {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card-content h3 {
+      color: var(--verde-oscuro);
+      margin-bottom: 10px;
+    }
+
+    .btn-saber-mas {
+      color: var(--verde-principal);
+      font-weight: bold;
+      text-decoration: none;
+      background: none;
+      border: none;
+      padding: 0;
+      font-size: 1em;
+      cursor: pointer;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .btn-saber-mas:hover {
+      text-decoration: underline;
+    }
+
+    .exitos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .exito {
+      background-color: #e9f4ec;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .exito h4 {
+      color: var(--verde-oscuro);
+      margin-bottom: 8px;
+    }
+
+    footer {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 60px;
+    }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      z-index: 1000;
+    }
+
+    .modal-overlay.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-tarjeta {
+      background-color: var(--blanco);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      width: 90%;
+      max-width: 600px;
+      position: relative;
+      transform: scale(0.9);
+      transition: transform 0.3s ease-out;
+    }
+
+    .modal-overlay.visible .modal-tarjeta {
+      transform: scale(1);
+    }
+
+    .modal-cerrar {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      font-weight: bold;
+      color: var(--gris);
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Planeta Vivo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">¿Quiénes somos?</a></li>
+        <li><a href="index2.html">Tienda</a></li>
+        <li><a href="index3.html">Campañas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Nuestras Campañas</h2>
+    <p>Conoce nuestros proyectos actuales para proteger el planeta y reducir el impacto del cambio climático.</p>
+  </section>
+
+  <section class="contenido">
+    <h2 class="seccion">Campaña Destacada</h2>
+    <div class="campana-destacada">
+      <img src="https://www.alqueria.com.co/_next/image?url=https%3A%2F%2Falqueriauploads.s3.us-east-1.amazonaws.com%2Fprod%2FBlog_Alqueria_Sostenibilidad_reforestacion_d1f8f5ac3d.jpg&w=3840&q=75" alt="Campaña Reforesta">
+      <div class="campana-info">
+        <h3>Proyecto Reforesta 2025–2026</h3>
+        <p>Esta iniciativa busca recuperar zonas afectadas por la deforestación en México mediante campañas de reforestación y educación ambiental. Nuestro objetivo es restaurar ecosistemas locales y fomentar la participación comunitaria en la conservación.</p>
+        <div class="botones">
+          <a href="voluntarios.html" target="_blank" class="btn btn-blanco">Ser voluntario</a>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="seccion">Otras Campañas Activas</h2>
+    <div class="grid-campanas">
+      
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhEf1nogGn9VF82g31TmFVBwSp-fBYPvrjiQ&s" alt="Transporte verde">
+        <div class="card-content">
+          <h3>Reducción de Emisiones de Carbono</h3>
+          <p>Promueve el transporte verde y la eficiencia energética para reducir la huella de carbono y cuidar el planeta.</p>
+          <button class="btn-saber-mas" id="btn-olas">Saber más →</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBvRPpHxsZYfdN-PQzcp2kCDiRcLkIZNqOSQ&s" alt="Purificación del agua">
+        <div class="card-content">
+          <h3>Purificación del Agua</h3>
+          <p>Campaña enfocada en la limpieza de ríos y la educación sobre la importancia del agua limpia.</p>
+          <button class="btn-saber-mas" id="btn-aulas">Saber más →</button>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="seccion">¿Cómo ayudar?</h2>
+    <div class="exitos">
+      <div class="exito">
+        <h4>Reduce, Reutiliza y Recicla</h4>
+        <p>Disminuye el uso de plásticos, separa tus residuos y reutiliza materiales cuando sea posible.</p>
+      </div>
+      <div class="exito">
+        <h4>Usa transporte sostenible</h4>
+        <p>Camina, usa bicicleta o transporte público para reducir emisiones de carbono.</p>
+      </div>
+      <div class="exito">
+        <h4>Ahorra agua y energía</h4>
+        <p>Cierra los grifos, apaga luces innecesarias y opta por aparatos de bajo consumo.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="modal-olas">
+    <div class="modal-tarjeta">
+      <button class="modal-cerrar" id="cerrar-olas">&times;</button>
+      <h2>Reducción de Emisiones de Carbono</h2>
+      <p>Esta campaña promueve el uso de transporte verde, energía limpia y tecnologías más eficientes para reducir la huella de carbono generada por actividades humanas.</p>
+      <p><strong>Acciones principales:</strong></p>
+      <ul>
+        <li>Fomentar el uso de bicicletas y transporte público.</li>
+        <li>Promover energías renovables en comunidades.</li>
+        <li>Reducir el consumo eléctrico en oficinas y hogares.</li>
+      </ul>
+      <a href="Planeta Vivo.mp4" target="_blank" class="btn">Más información</a>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-aulas">
+    <div class="modal-tarjeta">
+      <button class="modal-cerrar" id="cerrar-aulas">&times;</button>
+      <h2>Purificación del Agua</h2>
+      <p>El objetivo es limpiar ríos y cuerpos de agua contaminados, además de educar a las comunidades sobre la importancia de conservar fuentes limpias y seguras.</p>
+      <p><strong>Acciones principales:</strong></p>
+      <ul>
+        <li>Campañas de limpieza y recolección de residuos en ríos.</li>
+        <li>Instalación de filtros naturales de purificación.</li>
+        <li>Charlas educativas sobre el uso responsable del agua.</li>
+      </ul>
+      <a href="planeta vivo1.mp4" target="_blank" class="btn">Más información</a>
+    </div>
+  </div>
+
+<footer>
+    Equipo 6 | Planeta Vivo: ODS 13, Acción por el Clima | Hecho en HTML y CSS | <a href="contacto.html">Contacto</a>
+  </footer>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const modals = {
+        olas: {
+          open: document.getElementById('btn-olas'),
+          modal: document.getElementById('modal-olas'),
+          close: document.getElementById('cerrar-olas')
+        },
+        aulas: {
+          open: document.getElementById('btn-aulas'),
+          modal: document.getElementById('modal-aulas'),
+          close: document.getElementById('cerrar-aulas')
+        }
+      };
+
+      Object.values(modals).forEach(({ open, modal, close }) => {
+        open.addEventListener('click', () => modal.classList.add('visible'));
+        close.addEventListener('click', () => modal.classList.remove('visible'));
+        modal.addEventListener('click', e => {
+          if (e.target === modal) modal.classList.remove('visible');
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

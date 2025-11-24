@@ -1,0 +1,78 @@
+body {
+  background-color: #F9FFF9;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #2E7D32 !important;
+}
+.navbar-brand, .btn-group .btn {
+  color: #F9FFF9 !important;
+  font-weight: 600;
+}
+.btn-group .btn {
+  background-color: #388E3C;
+  border: none;
+}
+.btn-group .btn:hover {
+  background-color: #4CAF50;
+}
+
+/* Títulos */
+h1, h2 {
+  text-align: center;
+  margin: 30px 0 15px;
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+/* Párrafos */
+p {
+  text-align: center;
+  margin: 0 10% 20px;
+}
+
+/* Cards */
+.card {
+  border-radius: 10px;
+  border: none;
+}
+.card-body {
+  background-color: #fff;
+}
+.card-title {
+  color: #2E7D32;
+  font-weight: 600;
+}
+
+/* Carousel */
+.carousel-caption {
+  background-color: rgba(0,0,0,0.55);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Accordion */
+.accordion-button {
+  background-color: #A5D6A7;
+  color: #1B5E20;
+  font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #81C784;
+  color: #fff;
+}
+
+/* Footer */
+footer {
+  background-color: #2E7D32;
+  color: #E8F5E9;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 3px solid #1B5E20;
+}

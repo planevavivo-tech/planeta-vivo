@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyecto Reforesta 2025–2026 – Planeta Vivo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --verde-principal: #3ca374;
+      --verde-oscuro: #2b7a58;
+      --fondo: #f5f9f6;
+      --texto: #333;
+      --blanco: #fff;
+      --gris: #666;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+    body {
+      background-color: var(--fondo);
+      color: var(--texto);
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    header h1 { font-size: 1.6em; letter-spacing: 1px; }
+
+    nav ul { display: flex; list-style: none; gap: 20px; }
+
+    nav a {
+      color: var(--blanco);
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    .hero {
+      background: linear-gradient(rgba(60,163,116,0.6), rgba(60,163,116,0.6)),
+                  url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY0hpVmVq9eHLGzEvsDilaKkCHwrKwlwdCSw&s') center/cover;
+      color: var(--blanco);
+      text-align: center;
+      padding: 90px 20px;
+    }
+
+    .hero h2 { font-size: 2.4em; margin-bottom: 10px; }
+    .hero p { max-width: 700px; margin: 0 auto; font-size: 1.1em; }
+
+    .contenido {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+
+    h2.seccion {
+      text-align: center;
+      color: var(--verde-oscuro);
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .info-proyecto {
+      background-color: var(--blanco);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 50px;
+    }
+
+    .info-proyecto p {
+      color: var(--gris);
+      font-size: 1.05em;
+      margin-bottom: 20px;
+    }
+
+    .impacto {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .impacto .card {
+      background-color: #e9f4ec;
+      border: none;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .impacto h4 {
+      color: var(--verde-oscuro);
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background-color: #dff5e3;
+      text-align: center;
+      padding: 50px 20px;
+      border-radius: 12px;
+      margin-top: 60px;
+    }
+
+    .cta h2 { color: var(--verde-oscuro); margin-bottom: 15px; }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: var(--verde-principal);
+      color: var(--blanco);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover { background-color: var(--verde-oscuro); }
+
+    footer {
+      background-color: var(--verde-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      padding: 25px 10px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Planeta Vivo</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">¿Quiénes somos?</a></li>
+        <li><a href="index2.html">Tienda</a></li>
+        <li><a href="index3.html">Campañas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Proyecto Reforesta 2025–2026</h2>
+    <p>Una nueva campaña para devolverle vida a los bosques de México. ¡Sé parte del cambio desde el inicio!</p>
+  </section>
+
+  <section class="contenido">
+
+    <div class="info-proyecto">
+      <h2 class="seccion">¿Qué es el Proyecto Reforesta?</h2>
+      <p>El <strong>Proyecto Reforesta 2025–2026</strong> es una iniciativa ambiental creada por <strong>Planeta Vivo</strong> que busca restaurar zonas afectadas por la deforestación en México. A través de jornadas de plantación, educación ambiental y trabajo en comunidad, queremos reconstruir los ecosistemas y promover un futuro más verde.</p>
+
+      <p>Esta campaña comenzará oficialmente en <strong>noviembre de 2025</strong> con actividades en distintas regiones del país. Nuestro objetivo inicial es plantar más de <strong>10,000 árboles nativos</strong> en los primeros seis meses y fomentar la participación activa de estudiantes, familias y comunidades rurales.</p>
+    </div>
+
+    <h2 class="seccion">¿Por qué reforestar?</h2>
+    <div class="impacto">
+      <div class="card">
+        <h4>Protege la biodiversidad</h4>
+        <p>Los árboles son el hogar de miles de especies animales y vegetales. Reforestar ayuda a preservar sus hábitats naturales.</p>
+      </div>
+      <div class="card">
+        <h4>Mejora la calidad del aire</h4>
+        <p>Los bosques capturan CO₂ y liberan oxígeno, reduciendo los efectos del cambio climático.</p>
+      </div>
+      <div class="card">
+        <h4>Recupera los suelos</h4>
+        <p>Las raíces previenen la erosión y ayudan a mantener los suelos fértiles para la agricultura local.</p>
+      </div>
+    </div>
+
+    <div class="info-proyecto" style="margin-top:50px;">
+      <h2 class="seccion">¿Cómo participar?</h2>
+      <p>Tu ayuda es fundamental para que el proyecto tenga éxito. Puedes participar de distintas formas:</p>
+      <ul>
+        <li><strong>Como voluntario:</strong> Únete a las jornadas de reforestación en tu comunidad.</li>
+        <li><strong>Como donador:</strong> Apoya con semillas, herramientas o recursos para las actividades.</li>
+        <li><strong>Como promotor:</strong> Comparte la campaña y ayuda a inspirar a más personas a unirse.</li>
+      </ul>
+      <p>La inscripción para voluntarios abrirá el <strong>21 de noviembre de 2025</strong>. Mantente atento a nuestras redes y sitio oficial para conocer las fechas y lugares exactos.</p>
+    </div>
+
+    <div class="cta">
+      <h2>Apoya la campaña</h2>
+      <p>Para apoyar nuestra campaña podria registrarse o comprar algo bonito en nuestra tienda</p>
+      <a href="actua.html" target="_blank" class="btn">Registrarme</a>
+      <a href="index2.html" class="btn btn-blanco">Volver a la Tienda</a>
+    </div>
+  </section>
+
+<footer>
+    Equipo 6 | Planeta Vivo: ODS 13, Acción por el Clima | Hecho en HTML y CSS | <a href="contacto.html">Contacto</a>
+  </footer>
+</body>
+</html>
